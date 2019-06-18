@@ -3,8 +3,8 @@ import argparse
 import json
 from tqdm import tqdm
 import jieba
-filename = '../data/smaller.json'
-save_file = '../data/process.json'
+filename = '../data/small_train_data.json'
+save_file = '../data/train.json'
 
 def file_len(fname):
     count = 0

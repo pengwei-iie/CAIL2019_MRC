@@ -266,8 +266,8 @@ class RCModel(object):
         for epoch in range(1, epochs + 1):
             self.logger.info('Training the model for epoch {}'.format(epoch))
             train_batches = data.gen_mini_batches('train', batch_size, pad_id, shuffle=True)
-            # train_loss = self._train_epoch(train_batches, dropout_keep_prob)
-            # self.logger.info('Average train loss for epoch {} is {}'.format(epoch, train_loss))
+            train_loss = self._train_epoch(train_batches, dropout_keep_prob)
+            self.logger.info('Average train loss for epoch {} is {}'.format(epoch, train_loss))
 
             if evaluate:
                 self.logger.info('Evaluating the model after epoch {}'.format(epoch))

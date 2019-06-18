@@ -76,13 +76,13 @@ def parse_args():
 
     path_settings = parser.add_argument_group('path settings')
     path_settings.add_argument('--train_files', nargs='+',
-                               default=['../data/process.json'],
+                               default=['../data/train.json'],
                                help='list of files that contain the preprocessed train data')
     path_settings.add_argument('--dev_files', nargs='+',
-                               default=['../data/process.json'],
+                               default=['../data/train.json'],
                                help='list of files that contain the preprocessed dev data')
     path_settings.add_argument('--test_files', nargs='+',
-                               default=['../data/process.json'],
+                               default=['../data/train.json'],
                                help='list of files that contain the preprocessed test data')
     path_settings.add_argument('--brc_dir', default='../data',
                                help='the dir with preprocessed baidu reading comprehension data')
